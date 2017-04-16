@@ -23,7 +23,7 @@ class DemanderHeader extends React.Component {
         <nav>
           <IndexLink to="/" activeClassName="active">Home</IndexLink>
           {" | "}
-          <Link to="/company" activeClassName="active">Company</Link>
+          <Link to="/companies" activeClassName="active">Companies</Link>
           {" | "}
           <Link to="/cats" activeClassName="active">Cats</Link>
           {" | "}
