@@ -1,13 +1,29 @@
 import React, {PropTypes} from 'react';
-import Header from './common/Header';
+import { Layout } from 'antd';
+const { Header, Footer, Content } = Layout;
+import DemanderHeader from './layout/DemanderHeader';
+import DemanderFooter from './layout/DemanderFooter';
+import 'antd/dist/antd.css';
+import '../assets/css/style.css';
 
 class App extends React.Component {
   render() {
     return (
-      <div className="container-fluid">
-        <Header />
-        {this.props.children}
-      </div>
+       <Layout>
+
+         <Header>
+          <DemanderHeader/>
+         </Header>
+
+         <Content >
+           {this.props.children}
+         </Content>
+
+         <Footer style={{backgroundColor:"#3798b8"}}>
+           <DemanderFooter/>
+         </Footer>
+
+       </Layout>
     );
   }
 }
